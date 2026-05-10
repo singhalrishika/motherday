@@ -99,9 +99,9 @@
 <body class="text-gray-800 relative">
 
   <!-- VOICE NOTE -->
-<audio id="voiceNote">
-  <source src="audio/voice.ogg" type="audio/ogg">
-</audio>
+  <audio id="voiceNote">
+    <source src="audio/voice.ogg" type="audio/ogg">
+  </audio>
 
   <!-- HEARTS -->
   <div id="hearts"></div>
@@ -117,25 +117,56 @@
       A magical little surprise made with endless love 🌸
     </p>
 
-    <button onclick="startSurprise()"
-      class="mt-10 bg-pink-500 hover:bg-pink-600 text-white px-10 py-4 rounded-full text-xl shadow-2xl hover:scale-105 transition">
-      Start Surprise ✨
-    </button>
+    <!-- OPTIONS -->
+    <div class="mt-14 grid md:grid-cols-3 gap-8 max-w-5xl w-full">
 
-  </section>
+      <!-- LETTER -->
+      <div onclick="openLetter()"
+        class="cursor-pointer bg-white/80 backdrop-blur-lg p-10 rounded-[2rem] shadow-2xl hover:scale-105 transition border border-pink-100">
 
-  <!-- LETTER CHOICE -->
-  <section id="letterSection"
-    class="hidden-section min-h-screen flex items-center justify-center px-6 relative z-10">
+        <div class="text-7xl">💌</div>
 
-    <div onclick="openLetter()"
-      class="cursor-pointer bg-pink-200 p-10 rounded-[2rem] shadow-2xl hover:scale-105 transition text-center">
+        <h2 class="mt-5 text-3xl font-bold text-pink-500">
+          Letter
+        </h2>
 
-      <div class="text-8xl">💌</div>
+        <p class="mt-3 text-gray-600">
+          Open a heartfelt letter 💖
+        </p>
 
-      <p class="mt-5 text-3xl font-bold text-pink-600">
-        Choose Your Letter
-      </p>
+      </div>
+
+      <!-- BALLOONS -->
+      <div onclick="showBalloons()"
+        class="cursor-pointer bg-white/80 backdrop-blur-lg p-10 rounded-[2rem] shadow-2xl hover:scale-105 transition border border-pink-100">
+
+        <div class="text-7xl">🎈</div>
+
+        <h2 class="mt-5 text-3xl font-bold text-rose-500">
+          Balloons
+        </h2>
+
+        <p class="mt-3 text-gray-600">
+          Pop balloons and reveal memories ✨
+        </p>
+
+      </div>
+
+      <!-- MEMORIES -->
+      <div onclick="showMemories()"
+        class="cursor-pointer bg-white/80 backdrop-blur-lg p-10 rounded-[2rem] shadow-2xl hover:scale-105 transition border border-pink-100">
+
+        <div class="text-7xl">🖼️</div>
+
+        <h2 class="mt-5 text-3xl font-bold text-purple-500">
+          Memories
+        </h2>
+
+        <p class="mt-3 text-gray-600">
+          View a special memory ❤️
+        </p>
+
+      </div>
 
     </div>
 
@@ -167,13 +198,6 @@ Rishika and Daksha
 
       </div>
 
-      <div class="text-center mt-10">
-        <button onclick="showBalloons()"
-          class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full text-xl shadow-xl">
-          Continue To Balloons 🎈
-        </button>
-      </div>
-
     </div>
 
   </section>
@@ -190,7 +214,7 @@ Rishika and Daksha
 
       <!-- BALLOON 1 -->
       <div class="text-center">
-        <div onclick="popBalloon(this, 'photos/memory1.jpg', 'Every moment with you is special ❤️')"
+        <div onclick="popBalloon(this, 'memory1.jpg', 'Every moment with you is special ❤️')"
           class="cursor-pointer group balloon-float">
 
           <div class="w-40 h-52 mx-auto rounded-full bg-gradient-to-b from-pink-400 to-rose-500 shadow-2xl flex items-center justify-center text-6xl group-hover:scale-110 transition">
@@ -203,7 +227,7 @@ Rishika and Daksha
 
       <!-- BALLOON 2 -->
       <div class="text-center">
-        <div onclick="popBalloon(this, 'photos/memory2.jpg', 'Your smile heals everything 🌸')"
+        <div onclick="popBalloon(this, 'memory2.jpg', 'Your smile heals everything 🌸')"
           class="cursor-pointer group balloon-float">
 
           <div class="w-40 h-52 mx-auto rounded-full bg-gradient-to-b from-purple-400 to-pink-500 shadow-2xl flex items-center justify-center text-6xl group-hover:scale-110 transition">
@@ -216,7 +240,7 @@ Rishika and Daksha
 
       <!-- BALLOON 3 -->
       <div class="text-center">
-        <div onclick="popBalloon(this, 'photos/memory3.jpg', 'Thank you for always protecting me 💕')"
+        <div onclick="popBalloon(this, 'memory3.jpg', 'Thank you for always protecting me 💕')"
           class="cursor-pointer group balloon-float">
 
           <div class="w-40 h-52 mx-auto rounded-full bg-gradient-to-b from-rose-400 to-red-500 shadow-2xl flex items-center justify-center text-6xl group-hover:scale-110 transition">
@@ -229,7 +253,7 @@ Rishika and Daksha
 
       <!-- BALLOON 4 -->
       <div class="text-center">
-        <div onclick="popBalloon(this, 'photos/memory4.jpg', 'Your hugs are my favorite place ❤️')"
+        <div onclick="popBalloon(this, 'memory4.jpg', 'Your hugs are my favorite place ❤️')"
           class="cursor-pointer group balloon-float">
 
           <div class="w-40 h-52 mx-auto rounded-full bg-gradient-to-b from-yellow-300 to-orange-400 shadow-2xl flex items-center justify-center text-6xl group-hover:scale-110 transition">
@@ -242,7 +266,7 @@ Rishika and Daksha
 
       <!-- BALLOON 5 -->
       <div class="text-center">
-        <div onclick="popBalloon(this, 'photos/memory5.jpg', 'I will forever be grateful for you 💖')"
+        <div onclick="popBalloon(this, 'memory5.jpg', 'I will forever be grateful for you 💖')"
           class="cursor-pointer group balloon-float">
 
           <div class="w-40 h-52 mx-auto rounded-full bg-gradient-to-b from-cyan-300 to-blue-400 shadow-2xl flex items-center justify-center text-6xl group-hover:scale-110 transition">
@@ -264,7 +288,7 @@ Rishika and Daksha
     <div class="max-w-3xl bg-white rounded-[2rem] p-8 shadow-2xl text-center fade-in">
 
       <img
-        src="photos/main-photo.jpg"
+        src="memory1.jpg"
         class="rounded-3xl w-full h-96 object-cover"
         alt="memory"
       />
@@ -303,29 +327,36 @@ Rishika and Daksha
       heartsContainer.appendChild(heart);
     }
 
-    // MUSIC
+    // VOICE NOTE
     document.body.addEventListener('click', () => {
-  document.getElementById('voiceNote').play();
-}, { once: true });
+      document.getElementById('voiceNote').play();
+    }, { once: true });
 
     // POP SOUND
     const popSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
 
     let popped = 0;
 
-    function startSurprise() {
-      document.getElementById('hero').style.display = 'none';
-      document.getElementById('letterSection').style.display = 'flex';
-    }
-
     function openLetter() {
-      document.getElementById('letterSection').style.display = 'none';
+      hideAllSections();
       document.getElementById('realLetter').style.display = 'flex';
     }
 
     function showBalloons() {
-      document.getElementById('realLetter').style.display = 'none';
+      hideAllSections();
       document.getElementById('balloonSection').style.display = 'block';
+    }
+
+    function showMemories() {
+      hideAllSections();
+      document.getElementById('giftSection').style.display = 'flex';
+    }
+
+    function hideAllSections() {
+      document.getElementById('hero').style.display = 'none';
+      document.getElementById('realLetter').style.display = 'none';
+      document.getElementById('balloonSection').style.display = 'none';
+      document.getElementById('giftSection').style.display = 'none';
     }
 
     function popBalloon(element, image, text) {
@@ -353,19 +384,16 @@ Rishika and Daksha
 
             <div class="flex flex-col items-center">
 
-              <!-- BIG IMAGE -->
               <img
                 src="${image}"
                 class="w-full h-72 object-cover rounded-3xl shadow-lg"
               />
 
-              <!-- SMALL ROUND IMAGE -->
               <img
                 src="${image}"
                 class="w-24 h-24 object-cover rounded-full border-4 border-pink-300 shadow-xl -mt-10 bg-white"
               />
 
-              <!-- MEMORY TEXT -->
               <div class="mt-5 text-center">
 
                 <p class="text-lg text-gray-700 leading-relaxed font-medium">
